@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(getApplicationContext(),RecebePlanetas_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), RecebePlanetas_Activity.class);
 
                 //metodo putExtra() - passa o valor ou objeto de uma janela para outra
-                intent.putExtra("nome_planeta",nomePlanetas[position]);
-                intent.putExtra("imagem_planeta",imagemPlanetas[position]);
+                intent.putExtra("nome_planeta", nomePlanetas[position]);
+                intent.putExtra("imagem_planeta", imagemPlanetas[position]);
 
                 //irá abrir a janela e mandar os conteudos.
                 startActivity(intent);
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView imgPlaneta;
 
             //Criando o meu layout no adaptador para ser inflado (instanciado)
-            View view = getLayoutInflater().inflate(R.layout.modelo_planeta,null);
+            View view = getLayoutInflater().inflate(R.layout.modelo_planeta, null);
 
             nomePlaneta = view.findViewById(R.id.txtNomePlaneta);
             imgPlaneta = view.findViewById(R.id.imgPlaneta);
